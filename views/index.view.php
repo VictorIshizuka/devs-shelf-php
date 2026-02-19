@@ -1,3 +1,9 @@
+<section>
 
+  <?php foreach ($books as $book):  ?>
 
-<?= 'ola mundo' ?>
+    <div><?= $book->title ?></div>
+
+  <?php endforeach ?>
+
+</section>

@@ -1,3 +1,4 @@
 <?php
 
-view('index');
+$books = Book::all($_REQUEST['search'] ?? '');
+view('index', compact('books'));

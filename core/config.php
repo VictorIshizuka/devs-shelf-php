@@ -5,7 +5,7 @@ return [
     'database' => [
 
         'driver' => 'sqlite',
-        'database' => '../database/database.sqlite',
+        'database' => '../database/devs-shelf-db.sqlite',
 
     ]
 
