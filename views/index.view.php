@@ -1,3 +1,9 @@
+<form class="w-full md:w-1/2 flex space-x-2 mt-6">
+  <input type="search" name="search" placeholder="Pesquisar..."
+      class="border-slate-400 bg-slate-200 rounded-sm text-sm focus:outline-none px-2 py-1 w-full"/>
+  <button class="font-semibold border-2 border-slate-400 rounded-sm px-2" type="submit">Buscar</button>
+</form>
+
 <section class="my-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
   <?php foreach ($books as $book):  ?>
 
