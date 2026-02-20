@@ -13,7 +13,7 @@ class Book
 
   public $year_release;
 
-  public $user_id;
+  public $id_user;
 
   public $n_pages;
 

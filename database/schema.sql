@@ -24,3 +24,13 @@ VALUES(
 280,
 null
 );
+
+CREATE TABLE users (
+id integer primary key,
+name varchar(255) not null,
+email varchar(255) not null,
+password varchar(255) not null
+);
+
+INSERT INTO users (
+name, email, password) VALUES ('Victor Rosario Ishizuka', 'victor@gmail.com', '12345678');

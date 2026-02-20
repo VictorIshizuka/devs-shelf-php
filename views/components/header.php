@@ -3,10 +3,14 @@
     <div class="text-xl text-red-600">Devs Shelf</div>
     <ul class="flex space-x-4">
       <li>
-        Livros
+        <a href="/" class="text-red-500">
+          Explorar
+        </a>
       </li>
       <li>
-        Meus Livros
+        <a href="/my-books" class="hover:underline">
+          Meus Livros
+        </a>
       </li>
     </ul>
 
