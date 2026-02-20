@@ -15,6 +15,8 @@ class Book
 
   public $user_id;
 
+  public $n_pages;
+
   // public $image;
 
   // public $evaloutrion_couter;
@@ -32,7 +34,8 @@ class Book
         b.title,
         b.author,
         b.description,
-        b.year_release
+        b.year_release,
+        b.n_pages
 
       FROM
         books b
@@ -44,8 +47,9 @@ class Book
         b.id,
         b.title,
         b.author,
+        b.year_release,
         b.description,
-        b.year_release
+        b.n_pages
 
       ",
       self::class,
