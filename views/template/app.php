@@ -8,10 +8,10 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-slate-100 text-slate-500">
+<body class="bg-slate-100 text-slate-500 flex flex-col min-h-screen">
   <?php require_once  __DIR__ . "/../components/header.php" ?>
 
-  <main class="mx-auto max-w-screen-lg space-y-6">
+  <main class="grow mx-auto max-w-screen-lg space-y-6">
 
     <?php if ($message = flash()->get('message')): ?>
 
