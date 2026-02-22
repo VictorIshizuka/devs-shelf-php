@@ -30,9 +30,7 @@ Ele funciona apenas como uma plataforma de  **recomendação e curadoria** .
 
 ![1771797287660](image/Readme/1771797287660.png)
 
-![1771797326794](image/Readme/1771797326794.png)
-
-    ![1771797360703](image/Readme/1771797360703.png)
+![1771797581133](image/Readme/1771797581133.png)![1771797360703](image/Readme/1771797360703.png)
 
 ---
 
