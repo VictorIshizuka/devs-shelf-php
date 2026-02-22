@@ -2,65 +2,69 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6  mx-2">
 
-  <div class="border-2 border-slate-400 rounded p-auto">
+  <div>
 
-    <h1 class="font-semibold mx-4 mt-2">Cadastre um novo livro!</h1>
+    <div class="border-2 border-slate-400 rounded p-auto">
 
-    <form class="p-4 space-y-4" method="POST" action="/create-book" enctype="multipart/form-data">
+      <h1 class="font-semibold mx-4 mt-2">Cadastre um novo livro!</h1>
 
-      <div class="flex flex-col">
+      <form class="p-4 space-y-4" method="POST" action="/create-book" enctype="multipart/form-data">
 
-        <label class="text-stone-400 mb-1">Título</label>
+        <div class="flex flex-col">
 
-        <input type="text" name="title" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
+          <label class="text-stone-400 mb-1">Título</label>
 
-      </div>
-
-      <div class="flex flex-col">
-
-        <label class="text-stone-400 mb-1">Autor</label>
-
-        <input type="text" name="author" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
-
-      </div>
-
-      <div class="flex flex-col">
-
-        <label class="text-stone-400 mb-1">Descrição</label>
-
-        <textarea name="description" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full"></textarea>
-
-      </div>
-
-      <div class="flex flex-col-1 md:flex-col-2 gap-2">
-        <div>
-
-          <label class="text-stone-400 mb-1">Números de páginas</label>
-
-          <input name="n_pages" type="number" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full" />
+          <input type="text" name="title" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
 
         </div>
 
-        <div>
+        <div class="flex flex-col">
 
-          <label class="text-stone-400 mb-1">Ano de Lançamento</label>
+          <label class="text-stone-400 mb-1">Autor</label>
 
-          <select name="year_release" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
-
-            <?php foreach (range(1000, date('Y')) as $ano): ?>
-
-              <option value="<?= $ano ?>"><?= $ano ?></option>
-
-            <?php endforeach; ?>
-
-          </select>
+          <input type="text" name="author" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
 
         </div>
-      </div>
 
-      <button type="submit" class="font-semibold border-2 border-slate-400 rounded-sm px-2">Salvar</button>
+        <div class="flex flex-col">
 
-    </form>
+          <label class="text-stone-400 mb-1">Descrição</label>
+
+          <textarea name="description" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full"></textarea>
+
+        </div>
+
+        <div class="flex flex-col-1 md:flex-col-2 gap-2">
+          <div>
+
+            <label class="text-stone-400 mb-1">Números de páginas</label>
+
+            <input name="n_pages" type="number" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full" />
+
+          </div>
+
+          <div>
+
+            <label class="text-stone-400 mb-1">Ano de Lançamento</label>
+
+            <select name="year_release" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
+
+              <?php foreach (range(1000, date('Y')) as $ano): ?>
+
+                <option value="<?= $ano ?>"><?= $ano ?></option>
+
+              <?php endforeach; ?>
+
+            </select>
+
+          </div>
+          
+        </div>
+
+        <button type="submit" class="font-semibold border-2 border-slate-400 rounded-sm px-2">Salvar</button>
+
+      </form>
+    </div>
 
   </div>
 

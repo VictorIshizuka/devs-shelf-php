@@ -60,3 +60,9 @@ function auth()
 
   return $_SESSION['auth'];
 }
+
+function flash()
+{
+
+  return new Flash;
+}

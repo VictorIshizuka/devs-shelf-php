@@ -4,6 +4,23 @@
     <h1 class="border-b-2 border-slate-400 text-slate-400 font-bold px-4 py-2">Registrar</h1>
 
     <form class="p-4 space-y-4" method="POST">
+      <?php if ($validacoes = flash()->get('validation_register')): ?>
+
+        <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold mt-4">
+
+          <ul>
+
+            <?php foreach ($validacoes as $validacao): ?>
+
+              <li><?= $validacao ?></li>
+
+            <?php endforeach; ?>
+
+          </ul>
+
+        </div>
+
+      <?php endif; ?>
 
       <div class="flex flex-col">
 

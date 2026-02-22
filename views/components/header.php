@@ -7,16 +7,16 @@
           Explorar
         </a>
       </li>
-       <?php if (auth()): ?>
-      <li>
-        <a href="/my-books" class="hover:underline">
-          Meus Livros
-        </a>
-      </li>
+      <?php if (auth()): ?>
+        <li>
+          <a href="/my-books" class="hover:underline">
+            Meus Livros
+          </a>
+        </li>
       <?php endif; ?>
     </ul>
 
-    <ul class="flex gap-6">
+    <ul class="flex space-x-4">
       <?php if (auth()): ?>
         <li class="hover:underline"> Olá, <?= strstr(auth()->name, ' ', true); ?></li>
         <li>
@@ -26,8 +26,10 @@
         </li>
       <?php else: ?>
         <li>
-          <a href="/login" class="hover:underline">
-            Login
+          <a href="<?= parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) == '/register' || parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) == '/' ?
+                      '/login' : '/register' ?>" class="hover:underline">
+            <?= parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) == '/register' || parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) == '/'
+              ? 'Login' : 'Registre-se' ?>
           </a>
         </li>
       <?php endif; ?>

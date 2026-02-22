@@ -24,5 +24,7 @@ $database->query(
   params: compact('title', 'author', 'description', 'year_release', 'id_user', 'n_pages')
 );
 
+flash()->push('message', 'Livro cadastrado com sucesso!');
+
 header("Location: /my-books");
 exit();

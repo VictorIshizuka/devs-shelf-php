@@ -5,6 +5,24 @@
 
     <form class="p-4 space-y-4" method="POST">
 
+      <?php if ($validacoes = flash()->get('validation_login')): ?>
+
+        <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold mt-4">
+
+          <ul>
+
+            <?php foreach ($validacoes as $validacao): ?>
+
+              <li><?= $validacao ?></li>
+
+            <?php endforeach; ?>
+
+          </ul>
+
+        </div>
+
+      <?php endif; ?>
+
       <div class="flex flex-col">
 
         <label class="text-slate-400 mb-1">Email</label>
@@ -19,7 +37,6 @@
 
         <input type="password" name="password" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
 
-        <span><a href="/register" class="text-sm text-slate-400 ">Registre-se</a></span>
       </div>
       <button type="submit" class="border-slate-400 bg-slate-100 text-slate-400 font-semibold px-4 py-1 rounded-md border-2 hover:bg-slate-200">Logar</button>
 

@@ -5,6 +5,8 @@ require "../models/Book.php";
 
 session_start();
 
+require "../core/Flash.php";
+
 require "../core/functions.php";
 
 $config = require '../core/config.php';
