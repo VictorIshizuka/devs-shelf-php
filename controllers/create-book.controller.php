@@ -18,13 +18,26 @@ $description = $_POST['description'];
 $year_release = $_POST['year_release'];
 $n_pages = $_POST['n_pages'];
 
-$database->query(
-  "INSERT INTO books ( title, author, description, year_release, id_user, n_pages )
-  VALUES ( :title, :author, :description, :year_release, :id_user, :n_pages );",
-  params: compact('title', 'author', 'description', 'year_release', 'id_user', 'n_pages')
-);
 
-flash()->push('message', 'Livro cadastrado com sucesso!');
+$fileName = md5(rand());
+
+$extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+
+$image = "images/$fileName.$extension";
+
+$destination = __DIR__ . "/../public/" . $image;
+if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
+
+  $database->query(
+    "INSERT INTO books ( title, author, description, year_release, id_user, n_pages, image )
+  VALUES ( :title, :author, :description, :year_release, :id_user, :n_pages, :image );",
+    params: compact('title', 'author', 'description', 'year_release', 'id_user', 'n_pages', 'image')
+  );
+
+  flash()->push('message', 'Livro cadastrado com sucesso!');
+} else {
+  flash()->push('error', 'Falha ao mover a imagem. Verifique as permissões da pasta.');
+}
 
 header("Location: /my-books");
 exit();

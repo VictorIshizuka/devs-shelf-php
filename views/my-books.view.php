@@ -12,6 +12,14 @@
 
         <div class="flex flex-col">
 
+          <label class="text-stone-400 mb-1">Imagem</label>
+
+          <input type="file" name="image" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
+
+        </div>
+
+        <div class="flex flex-col">
+
           <label class="text-stone-400 mb-1">Título</label>
 
           <input type="text" name="title" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
@@ -58,7 +66,7 @@
             </select>
 
           </div>
-          
+
         </div>
 
         <button type="submit" class="font-semibold border-2 border-slate-400 rounded-sm px-2">Salvar</button>
@@ -74,7 +82,9 @@
       <div class="bg-slate-200 p-4 rounded-sm shadow-sm
                 flex flex-col md:flex-row gap-4">
         <div class="w-full md:w-1/3 aspect-[3/4]
-                bg-red-200 flex items-center justify-center">capa</div>
+                bg-red-200 flex items-center justify-center">
+          <img src="<?= $book->image ?>" alt="Imagem do Livro" class="w-60 rounded">
+        </div>
 
         <div class="w-full md:w-2/3 flex flex-col gap-2">
           <a href="book?id=<?= $book->id ?>" class="font-semibold text-lg hover:underline"><?= $book->title ?></a>

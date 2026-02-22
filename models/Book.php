@@ -17,7 +17,7 @@ class Book
 
   public $n_pages;
 
-  // public $image;
+  public $image;
 
   // public $evaloutrion_couter;
 
@@ -35,7 +35,8 @@ class Book
         b.author,
         b.description,
         b.year_release,
-        b.n_pages
+        b.n_pages,
+        b.image
 
       FROM
         books b
