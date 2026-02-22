@@ -3,9 +3,28 @@ id integer primary key,
 title varchar(255) not null,
 description text,
 author varchar(255) not null,
+image varchar(255)
 year_release integer,
-n_pages integer,id_user integer,
+n_pages integer,
+id_user integer,
 FOREIGN KEY (id_user) REFERENCES users(id)
+);
+
+CREATE TABLE users (
+id integer primary key,
+name varchar(255) not null,
+email varchar(255) not null,
+password varchar(255) not null
+);
+
+CREATE TABLE evaluation (
+id integer primary key,
+id_user integer,
+id_book integer,
+comment text,
+grade integer,
+FOREIGN KEY (id_user) REFERENCES users(id)
+FOREIGN KEY (id_book) REFERENCES books(id)
 );
 
 INSERT INTO books( 
@@ -25,12 +44,5 @@ VALUES(
 null
 );
 
-CREATE TABLE users (
-id integer primary key,
-name varchar(255) not null,
-email varchar(255) not null,
-password varchar(255) not null
-);
-
 INSERT INTO users (
-name, email, password) VALUES ('Victor Rosario Ishizuka', 'victor@gmail.com', '12345678');
+name, email, password) VALUES ('Usuario Teste', 'teste@gmail.com', '12345678');
