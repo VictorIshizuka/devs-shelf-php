@@ -2,7 +2,7 @@
                 flex flex-col md:flex-row gap-4 m-6">
   <div class="w-full md:w-1/3 aspect-[3/4]
                 bg-red-200 flex items-center justify-center">
-    <img src="<?= $book->image ?>" alt="Imagem do Livro" class="w-60 rounded">
+    <img src="<?= $book->image ?>" alt="Imagem do Livro">
   </div>
 
   <div class="w-full md:w-2/3 flex flex-col gap-2">
