@@ -1,4 +1,4 @@
 <?php
 
-$books = Book::all('');
+$books = Book::myBooks(1);
 view('my-books', compact('books'));

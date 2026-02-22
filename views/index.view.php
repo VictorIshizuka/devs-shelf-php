@@ -13,7 +13,7 @@
                 bg-red-200 flex items-center justify-center">capa</div>
 
       <div class="w-full md:w-2/3 flex flex-col gap-2">
-        <div class="font-bold text-lg"><?= $book->title ?></div>
+        <a href="book?id=<?= $book->id ?>" class="font-semibold text-lg hover:underline"><?= $book->title ?></a>
         <div class="text-sm">Qtd páginas:<?= $book->n_pages ?></div>
         <div class="text-sm">Author: <?= $book->author ?></div>
         <div class="text-sm line-clamp-4">

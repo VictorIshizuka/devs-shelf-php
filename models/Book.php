@@ -57,8 +57,17 @@ class Book
     );
   }
 
+  public static function get($id){
+    return (new self)->query('b.id = :id', params: ['id' => $id])->fetch();
+  }
+
   public static function all($filter)
   {
     return (new self)->query('b.title LIKE :filter', ['filter' => "%$filter%"])->fetchAll();
+  }
+
+  public static function myBooks($id_user){
+    return (new self)->query('b.id_user = :id_user', params: ['id_user' => $id_user])->fetchAll();
+
   }
 }
