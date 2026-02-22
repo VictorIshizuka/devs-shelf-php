@@ -28,6 +28,12 @@ O sistema permite que usuários:
 
 Ele funciona apenas como uma plataforma de  **recomendação e curadoria** .
 
+![1771797287660](image/Readme/1771797287660.png)
+
+![1771797326794](image/Readme/1771797326794.png)
+
+    ![1771797360703](image/Readme/1771797360703.png)
+
 ---
 
 ## 🚀 Tecnologias utilizadas
@@ -92,7 +98,8 @@ Campos básicos:
 * Título
 * Autor
 * Data de publicação
-* URL da capa
+* Imagem da capa
+* número de paginas
 * Descrição (opcional)
 
 ### ⭐ Avaliações
@@ -170,7 +177,7 @@ Este projeto foi criado para:
 
 ### 1️⃣ Clone o repositório
 
-<pre class="overflow-visible! px-0!" data-start="3394" data-end="3458"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>git </span><span>clone</span><span> https://github.com/VictorIshizuka/devs-helf-php.git
+<pre class="overflow-visible! px-0!" data-start="3394" data-end="3458"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>git </span><span>clone</span><span> https://github.com/VictorIshizuka/devs-shelf-php.git
 </span></span></code></div></div></pre>
 
 ### 2️⃣ Configure o banco
@@ -205,7 +212,7 @@ Versão atual:
 
 Próxima versão:
 
-> Introdução de Composer + PSR-4
+> Composer + PSR-4
 
 Versão futura:
 
@@ -227,5 +234,3 @@ Ele foi criado exclusivamente como projeto de estudo e evolução técnica em PH
 ## 👨‍💻 Autor
 
 Victor Ishizuka
-
-Desenvolvedor curioso em php puro, arquitetura e organização de sistemas.
