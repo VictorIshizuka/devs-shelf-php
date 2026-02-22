@@ -2,6 +2,7 @@
 
 require "../models/User.php";
 require "../models/Book.php";
+require "../models/Evaluation.php";
 
 session_start();
 

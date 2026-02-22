@@ -16,12 +16,13 @@
         <a href="book?id=<?= $book->id ?>" class="font-semibold text-lg hover:underline"><?= $book->title ?></a>
         <div class="text-sm">Qtd páginas:<?= $book->n_pages ?></div>
         <div class="text-sm">Author: <?= $book->author ?></div>
+        <div class="text-xs italic"><?= str_repeat('⭐', (int) ($book->note_book ?? 0)) ?>
+          (<?= $book->count_note ?? 0 ?> Avaliações)
+        </div>
         <p class="text-sm line-clamp-4">
           <?= $book->description ?>
         </p>
-        <div class="border rounded-sm p-2 mt-auto">
-          x y z
-        </div>
+
       </div>
     </div>
 

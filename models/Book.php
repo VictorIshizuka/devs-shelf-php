@@ -19,9 +19,9 @@ class Book
 
   public $image;
 
-  // public $evaloutrion_couter;
+  public $count_note;
 
-  // public $evaluation_grade;
+  public $note_book;
 
   public function query($where, $params)
   {
@@ -36,10 +36,14 @@ class Book
         b.description,
         b.year_release,
         b.n_pages,
-        b.image
+        b.image,
+        round(sum(e.note) / 5.0) as note_book,
+        count(e.id) as count_note
 
       FROM
         books b
+
+      LEFT JOIN evaluation e on e.id_book = b.id
 
       WHERE $where
 
@@ -48,8 +52,8 @@ class Book
         b.id,
         b.title,
         b.author,
-        b.year_release,
         b.description,
+        b.year_release,
         b.n_pages
 
       ",
