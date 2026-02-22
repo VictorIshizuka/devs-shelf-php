@@ -16,7 +16,7 @@
       <?php endif; ?>
     </ul>
 
-    <ul class="flex gap-2">
+    <ul class="flex gap-6">
       <?php if (auth()): ?>
         <li class="hover:underline"> Olá, <?= strstr(auth()->name, ' ', true); ?></li>
         <li>
