@@ -18,6 +18,21 @@ $description = $_POST['description'];
 $year_release = $_POST['year_release'];
 $n_pages = $_POST['n_pages'];
 
+$validation = Validation::validate(
+  [
+    'title' => ['required', 'min:3'],
+    'author' => ['required'],
+    'description' => ['required'],
+    'year_release' => ['required']
+  ],
+  $_POST
+);
+
+if ($validation->isInvalid()) {
+  header('Location: /my-books');
+  exit();
+}
+
 
 $fileName = md5(rand());
 

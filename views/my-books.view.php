@@ -10,6 +10,24 @@
 
       <form class="p-4 space-y-4" method="POST" action="/create-book" enctype="multipart/form-data">
 
+        <?php if ($validacoes = flash()->get('validations')): ?>
+
+          <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold mt-4">
+
+            <ul>
+
+              <?php foreach ($validacoes as $validacao): ?>
+
+                <li><?= $validacao ?></li>
+
+              <?php endforeach; ?>
+
+            </ul>
+
+          </div>
+
+        <?php endif; ?>
+
         <div class="flex flex-col">
 
           <label class="text-stone-400 mb-1">Imagem</label>

@@ -30,7 +30,7 @@
 
         <form class="p-4 space-y-4" method="POST" action="/create-evaluation">
 
-          <?php if ($validations = flash()->get('validation')): ?>
+          <?php if ($validations = flash()->get('validations')): ?>
 
             <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold my-4">
 

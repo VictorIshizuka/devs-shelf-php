@@ -5,7 +5,7 @@
 
     <form class="p-4 space-y-4" method="POST">
 
-      <?php if ($validacoes = flash()->get('validation_login')): ?>
+      <?php if ($validacoes = flash()->get('validations_login')): ?>
 
         <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold mt-4">
 

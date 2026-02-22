@@ -13,6 +13,18 @@ $id_book = $_POST['id_book'];
 $comment = $_POST['comment'];
 $note = $_POST['note'];
 
+$validation = Validation::validate(
+  [
+    'comment' => ['required'],
+    'note' => ['required']
+  ], $_POST
+);
+
+if($validation->isInvalid()){
+  header('Location: /book?id='. $id_book);
+  exit();
+}
+
 
 $database->query(
   "INSERT INTO evaluation (id_user, id_book, comment, note)

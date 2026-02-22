@@ -4,7 +4,7 @@
     <h1 class="border-b-2 border-slate-400 text-slate-400 font-bold px-4 py-2">Registrar</h1>
 
     <form class="p-4 space-y-4" method="POST">
-      <?php if ($validacoes = flash()->get('validation_register')): ?>
+      <?php if ($validacoes = flash()->get('validations_register')): ?>
 
         <div class="border-red-400 bg-red-200 text-red-400 px-4 py-1 rounded-md border-2 text-sm font-bold mt-4">
 
@@ -34,6 +34,13 @@
         <label class="text-slate-400 mb-1">Email</label>
 
         <input type="email" name="email" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
+
+      </div>
+      <div class="flex flex-col">
+
+        <label class="text-slate-400 mb-1">Confirmar Email</label>
+
+        <input type="email" name="email_confirmed" class="border-slate-400 border-2 rounded-sm bg-slate-200 text-sm focus:outline-none px-2 py-1 w-full">
 
       </div>
 
